@@ -1,6 +1,6 @@
 ---
 name: bumping-a-logos-module-backend
-description: Use when bumping the library "backend" a Logos Core module wraps — logos-delivery in logos-delivery-module, logos-chat (libchat) in logos-chat-module — to latest master/main or to a given commit/tag, reviewing every upstream commit in the range and applying the matching module-side changes, then opening a draft PR. Keywords: bump logos-delivery, bump libchat, bump logos-chat, update backend, flake.lock bump, Cargo rev bump, upstream diff review.
+description: 'Use when bumping the library "backend" a Logos Core module wraps — logos-delivery in logos-delivery-module, logos-chat (libchat) in logos-chat-module — to latest master/main or to a given commit/tag, reviewing every upstream commit in the range and applying the matching module-side changes, then opening a draft PR. Keywords: bump logos-delivery, bump libchat, bump logos-chat, update backend, flake.lock bump, Cargo rev bump, upstream diff review.'
 ---
 
 # Bumping a module's backend library

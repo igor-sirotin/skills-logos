@@ -1,6 +1,6 @@
 ---
 name: logos-messaging-update-deck
-description: Use when the Logos Messaging lead needs a recurring team/stakeholder update presentation — quarterly reviews or per-testnet-release updates — summarizing what was accomplished in a period. Builds a Slidev deck from the Logos roadmap, PM issues, and verified repo state. Keywords: presentation, slides, slidev, deck, quarterly update, testnet release, roadmap, progress report.
+description: "Use when the Logos Messaging lead needs a recurring team/stakeholder update presentation — quarterly reviews or per-testnet-release updates — summarizing what was accomplished in a period. Builds a Slidev deck from the Logos roadmap, PM issues, and verified repo state. Keywords: presentation, slides, slidev, deck, quarterly update, testnet release, roadmap, progress report."
 ---
 
 # Logos Messaging Update Deck

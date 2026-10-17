@@ -1,6 +1,6 @@
 ---
 name: writing-logos-messaging-journey
-description: Use when someone on Logos Messaging needs to write a "Journey" doc packet for the docs team and file it via the logos-docs doc-packet.yml issue template — a structured request describing a λChat / libchat / Waku / SDS user journey (run a node, send a message, sync, etc.) on local/devnet/testnet. Keywords: journey, doc packet, doc-packet.yml, logos-docs, documentation request, type:journey, SME packet, happy path.
+description: 'Use when someone on Logos Messaging needs to write a "Journey" doc packet for the docs team and file it via the logos-docs doc-packet.yml issue template — a structured request describing a λChat / libchat / Waku / SDS user journey (run a node, send a message, sync, etc.) on local/devnet/testnet. Keywords: journey, doc packet, doc-packet.yml, logos-docs, documentation request, type:journey, SME packet, happy path.'
 ---
 
 # Writing a Logos Messaging Journey Doc Packet

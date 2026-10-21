@@ -23,7 +23,7 @@ done
 
 # Remove dangling links that point back into this repo.
 for link in "$dest"/*; do
-  [ -L "$link" ] && [ ! -e "$link" ] || continue
+  if [ ! -L "$link" ] || [ -e "$link" ]; then continue; fi
   case "$(readlink "$link")" in
     "$repo"/*) rm "$link"; echo "prune  $(basename "$link")" ;;
   esac

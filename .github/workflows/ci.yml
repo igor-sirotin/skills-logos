@@ -1,0 +1,41 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  skills:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      - run: pip install pyyaml
+      - run: python .github/scripts/check_skills.py
+
+  link-sh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - run: shellcheck link.sh
+      - name: Smoke-test link.sh
+        run: |
+          dest="$(mktemp -d)"
+          export CLAUDE_SKILLS_DIR="$dest"
+          mkdir "$dest/real-dir"
+          ln -s "$PWD/removed-skill" "$dest/removed-skill"
+          ./link.sh
+          ./link.sh
+          for skill in */SKILL.md; do
+            name="$(dirname "$skill")"
+            test -L "$dest/$name"
+            test "$(readlink -f "$dest/$name")" = "$PWD/$name"
+          done
+          test ! -e "$dest/removed-skill" && test ! -L "$dest/removed-skill"
+          test -d "$dest/real-dir" && test ! -L "$dest/real-dir"
